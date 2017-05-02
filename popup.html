@@ -1,38 +1,26 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
-  <head>
-    <title>Pepsi to bepis' Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="bepisitize.js"></script>
-  </head>
-  <body>
-  <h3>BEPIS</h3>
-    <div id="status"></div>
-    <img id="image-result" hidden>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Pepsi to bepis</title>
+		
+		<!-- Scripts -->
+		<script src="js/bepisitize.js"></script>
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/custom.css" rel="stylesheet" media="screen">
+	</head>
+	
+	<body>
+	<div>
+		<h3>Pepsi to bepis</h3>
+	</div>
+	<div>
+		<img src="img/P2b.png" alt="Pepsi to bepis Doggo" class="img-thumbnail">
+	</div>
+	</body>
 </html>
-
