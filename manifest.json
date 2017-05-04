@@ -9,13 +9,17 @@
 	                "*://*/*"
 	            ],
 	            "js": [
+	            	"js/normalize.js",
 	                "js/bepisitize.js"
 	            ],
 	            "run_at": "document_end"
 	        }
 	    ],
 	"permissions": [
-		"storage"
+		"http://*/*", 
+		"https://*/*",
+		"storage",
+		"tabs"
 	],
 	"icons": { 
 		"16": "img/icon16.png",

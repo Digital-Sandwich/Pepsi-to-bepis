@@ -2,7 +2,7 @@ var allElements = document.getElementsByTagName('*');
 
 var imgElements = document.getElementsByTagName("img");
 
-function bepisitize() {
+function normalize() {
 	for (var i = 0; i < allElements.length; i++) {
 		var textElement = allElements[i];
 
@@ -12,7 +12,7 @@ function bepisitize() {
 			if (node.nodeType === 3) {
 
 				var text = node.nodeValue;
-				var replacedText = text.replace(/pepsi/gi, 'bepis');
+				var replacedText = text.replace(/bepis/gi, 'Pepsi');
 
 				if (replacedText !== text) {
 					textElement.replaceChild(document.createTextNode(replacedText), node);
@@ -20,14 +20,6 @@ function bepisitize() {
 			}
 		}
 	}
-	// for (var l = 0; l < imgElements.length; i++) {
-	// 	var img = imgElements[l];
-	// 		console.log('old src ' + img.src);
-	// 	if (img.src != " ") {
-	// 		img.src = 'ABSOLUTE PATH';
-	// 	}
-	// 	console.log('new src ' + img.src);
-	// }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -37,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	normal.addEventListener('click', function(normal) {
 		document.getElementById("info").textContent= "off";
 	});
-
+	
 	bepis.addEventListener('click', function(bepis) {
 		bepisitize();
 		document.getElementById("info").textContent = 'on';
