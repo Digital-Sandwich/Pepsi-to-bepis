@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		for(var i = 0; i<tabs.length;i++) {
 			allTabs.push(tabs[i]);
 			chrome.tabs.executeScript(tabs[i].id, {file: "js/normalize.js", runAt: "document_end"});
-			//chrome.tabs.reload(tabs[i].id);
 		}
 	});
 	console.log(allTabs);
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	normal.addEventListener('click', function(normal) {
 			for(var i = 0; i<allTabs.length;i++) {
 				chrome.tabs.executeScript(allTabs[i].id, {file: "js/normalize.js", runAt: "document_end"});
-				//chrome.tabs.reload(tabs[i].id);
 			}
 		document.getElementById("info").textContent= "off";
 	});
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	bepis.addEventListener('click', function(bepis) {
 			for(var i = 0; i<allTabs.length;i++) {
 				chrome.tabs.executeScript(allTabs[i].id, {file: "js/bepisitize.js", runAt: "document_end"});
-				//chrome.tabs.reload(tabs[i].id);
 			}
 		document.getElementById("info").textContent = 'on';
 	});
