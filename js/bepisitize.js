@@ -12,10 +12,25 @@ function bepisitize() {
 			if (node.nodeType === 3) {
 
 				var text = node.nodeValue;
-				var replacedText = text.replace(/pepsi/gi, 'bepis');
 
-				if (replacedText !== text) {
-					textElement.replaceChild(document.createTextNode(replacedText), node);
+				var whichCase = 'lower';
+				
+				if (text[0] == /[A-Z]/g) {
+					whichCase = 'upper';
+				}
+
+				if (text[0] == /[a-z]/g) {
+					whichCase = 'lower';
+				}
+
+				var replacedTextCaps = text.replace(/(Pepsi)/g, 'bepis\u200b');
+				var replacedTextLower = text.replace(/(pepsi)/g, 'bepis');
+
+				if (replacedText !== text && whichCase === 'upper') {
+					textElement.replaceChild(document.createTextNode(replacedTextCaps), node);
+				}
+				if (replacedText !== text && whichCase === 'lower') {
+					textElement.replaceChild(document.createTextNode(replacedTextLower), node);
 				}
 			}
 		}
