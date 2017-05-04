@@ -1,13 +1,13 @@
 #normal {
-	background-color: red;
-	outline: 3px solid black;
-	height: 50px;
+	color: #cad3f7;
+	outline: 0.5px solid #000000;
+	height: 75px;
 }
 
 #bepis {
-	background-color: blue;
-	outline: 3px solid black;
-	height: 50px;
+	color: #ffa5a5;
+	outline: 0.5px solid #000000;
+	height: 75px;
 }
 
 body, section {			/* Change width and height to own preferences */

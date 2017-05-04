@@ -9,10 +9,11 @@
 	                "*://*/*"
 	            ],
 	            "js": [
-	            	"js/normalize.js",
-	                "js/bepisitize.js"
-	            ],
-	            "run_at": "document_end"
+	            	"js/main.js"
+	            	/*"js/normalize.js",
+	                "js/bepisitize.js"*/
+	            ]
+	            //"run_at": "document_end"
 	        }
 	    ],
 	"permissions": [

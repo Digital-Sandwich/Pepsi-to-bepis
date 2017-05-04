@@ -20,18 +20,16 @@ function normalize() {
 			}
 		}
 	}
+	// for (var l = 0; l < imgElements.length; i++) {
+	// 	var img = imgElements[l];
+	// 		console.log('old src ' + img.src);
+	// 	if (img.src != " ") {
+	// 		img.src = 'ABSOLUTE PATH';
+	// 	}
+	// 	console.log('new src ' + img.src);
+	// }
+	//throw new Error("my error message");
+
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-	var bepis = document.getElementById('bepis');
-	var normal = document.getElementById('normal');
-
-	normal.addEventListener('click', function(normal) {
-		document.getElementById("info").textContent= "off";
-	});
-	
-	bepis.addEventListener('click', function(bepis) {
-		bepisitize();
-		document.getElementById("info").textContent = 'on';
-	});
-});
+normalize();
